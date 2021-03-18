@@ -2,7 +2,11 @@
 <html>
   
   <head>
-    <style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title> Document 1</title>
+   <style>
       body {
         background-color: #f8f8f8;
         font-family: "Poppins", sans-serif;
@@ -97,22 +101,19 @@
     </div>
     <div>
       <h4>Click to get number</h4>
-      <button class= "button" onclick="fireUp()" "/> Click me </button>
+      <button class= "button" onclick="fireUp()"> Click me </button>
       <input class ="text" id= "randomNumber" type="text" value="" />
     </div>
-    <div>
+
       
       
     <script>
-   let random=  Math.floor(Math.random () * 77)
-    function fireUp() {
-     
-    document.getElementById("randomNumber").value = random
+   
+    
 
     // const grabValue = function () {
     //     let numberInput = document.getElementById("randomNumber").value;
       
-  }    
       
     // window.onload =function () {
       let board = document.querySelector("#board")
@@ -121,12 +122,14 @@
         child.className = "number"
         const number= document.createElement("h3")
         const numberOfCell= i + 1
-        number.innerText= numberOfCell
+        number.innerText = numberOfCell
         child.appendChild(number)
         board.appendChild(child)
       
       }
-    
+    function fireUp() {
+     let random =  Math.floor(Math.random () * 77)
+    document.getElementById("randomNumber").value = random }
 
     </script>
 
