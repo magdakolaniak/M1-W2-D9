@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <style>
+      body {
+        background-color: #f8f8f8;
+        font-family: "Poppins", sans-serif;
+        color: #1b1b1b;
+        max-width: 900px;
+        max-height: 300 px;
+        margin: 0 auto;
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20 px;
+        margin-left: 35%;
+        font-style: oblique;
+        color: rgb(44, 44, 97)
+      }
+   
+     
+
+      #board{
+        background-color: #636ee8;
+        color: rgba(32, 44, 113, 0.947);
+        font-style: oblique;
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 15px;
+       
+      }
+
+      .number {
+        display: inline-block;
+        position: relative; 
+        width: 14%;
+        text-align: center;
+        height: 80px;
+        border: 1px solid
+    
+      }
+      .number h3 {
+        font-weight: 300;
+        font-size: 26px;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        
+      } 
+
+      input[value= "Number:"] {
+        width: 50%;
+        min-height: 24px;
+        background-color: #242227;
+        color: white;
+        border: solid;
+        border-radius: 3px;
+        padding: 10px;
+        font-weight: bold;
+      }
+      input [type= "text"] {
+        width: 50%;
+        min-height: 24px;
+        background-color: #242227;
+        color: white;
+        border: solid;
+        border-radius: 3px;
+        padding: 10px;
+        font-weight: bold;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 id="heading">Bingo Game</h1>
+    <div id="board">
+      
+    </div>
+    <div>
+      <h4>Click to get number</h4>
+      <input id= "button" type="button" value="Number:"  />
+      <input id= "randomNumber" type="text"  />
+    </div>
+    <div>
+      
+      
+    <script>
+     
+      
+      let board = document.querySelector("#board")
+      for (let i = 0; i < 77; i++) {
+        const child = document.createElement("div")
+        child.className = "number"
+        const number= document.createElement("h3")
+        const numberOfCell= i + 1
+        number.innerText= numberOfCell
+        child.appendChild(number)
+        board.appendChild(child)
+      }
+      
+    //   const randomNumber = function () {
+
+    //   return Math.floor(Math.random () * 77) 
+    // document.getElementById("randomNumber").value = randomNumber
+
+    //   let btn = document.getElementById("button")
+    // btn.addEventListener("click", randomNumber ())
+
+    </script>
+
+  </body>
+</html>
