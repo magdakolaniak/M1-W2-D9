@@ -140,14 +140,14 @@
      
     let numbers = document.querySelectorAll(".number")
     for (i=0; i<numbers.length; i++) {
+      numbers[i].classList.remove("selected")
       if (random==numbers[i].innerText) {
         numbers[i].classList.add("selected")
-        document.getElementById("randomNumber".value= "")
-      }
-    }
 
   }
-    </script>
+}
+   }
+      </script>
 
   </body>
 </html>
