@@ -51,8 +51,13 @@
         font-size: 26px;
         margin: 0;
         top: 50%;
+      }
+
+        .selected {
+        background-color: cadetblue;
+        }
         
-      } 
+      
 
       /* input[value= "Number:"] {
         width: 50%;
@@ -126,11 +131,22 @@
         child.appendChild(number)
         board.appendChild(child)
       
+      
       }
+    
     function fireUp() {
-     let random =  Math.floor(Math.random () * 77)
-    document.getElementById("randomNumber").value = random }
+      let random =  Math.floor(Math.random () * 77)
+     document.getElementById("randomNumber").value = random 
+     
+    let numbers = document.querySelectorAll(".number")
+    for (i=0; i<numbers.length; i++) {
+      if (random==numbers[i].innerText) {
+        numbers[i].classList.add("selected")
+        document.getElementById("randomNumber".value= "")
+      }
+    }
 
+  }
     </script>
 
   </body>
